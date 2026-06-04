@@ -1,0 +1,91 @@
+{
+  "name": "babysitter",
+  "version": "5.1.1-staging.5ad08884fb61",
+  "orchestration": "workflow-driven",
+  "steps": [
+    {
+      "id": "session-start",
+      "hook": "SessionStart",
+      "type": "workflow",
+      "handler": "hooks/session-start.sh"
+    },
+    {
+      "id": "stop",
+      "hook": "Stop",
+      "type": "workflow",
+      "handler": "hooks/stop.sh"
+    },
+    {
+      "id": "user-prompt-submit",
+      "hook": "UserPromptSubmit",
+      "type": "workflow",
+      "handler": "hooks/user-prompt-submit.sh"
+    },
+    {
+      "id": "pre-tool-use",
+      "hook": "PreToolUse",
+      "type": "workflow",
+      "handler": "hooks/pre-tool-use.sh"
+    },
+    {
+      "id": "post-tool-use",
+      "hook": "PostToolUse",
+      "type": "workflow",
+      "handler": "hooks/post-tool-use.sh"
+    },
+    {
+      "id": "subagent-stop",
+      "hook": "SubagentStop",
+      "type": "workflow",
+      "handler": "hooks/subagent-stop.sh"
+    },
+    {
+      "id": "notification",
+      "hook": "Notification",
+      "type": "workflow",
+      "handler": "hooks/notification.sh"
+    },
+    {
+      "id": "pre-compact",
+      "hook": "PreCompact",
+      "type": "workflow",
+      "handler": "hooks/pre-compact.sh"
+    },
+    {
+      "id": "after-agent",
+      "hook": "AfterAgent",
+      "type": "workflow",
+      "handler": "hooks/after-agent.sh"
+    },
+    {
+      "id": "session-end",
+      "hook": "SessionEnd",
+      "type": "workflow",
+      "handler": "hooks/session-end.sh"
+    },
+    {
+      "id": "session-idle",
+      "hook": "SessionIdle",
+      "type": "workflow",
+      "handler": "hooks/session-idle.sh"
+    },
+    {
+      "id": "shell-env",
+      "hook": "ShellEnv",
+      "type": "workflow",
+      "handler": "hooks/shell-env.sh"
+    },
+    {
+      "id": "before-prompt-build",
+      "hook": "BeforePromptBuild",
+      "type": "workflow",
+      "handler": "hooks/before-prompt-build.sh"
+    },
+    {
+      "id": "before-provider-request",
+      "hook": "BeforeProviderRequest",
+      "type": "workflow",
+      "handler": "hooks/before-provider-request.sh"
+    }
+  ]
+}

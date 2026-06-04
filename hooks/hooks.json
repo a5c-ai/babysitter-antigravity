@@ -1,0 +1,83 @@
+{
+  "description": "babysitter plugin hooks for Antigravity CLI",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "name": "babysitter-session-start",
+            "type": "workflow",
+            "command": "adapters-hooks invoke --adapter antigravity --handler \"bash ${ANTIGRAVITY_SKILL_PATH}/hooks/babysitter-proxied-session-start.sh\" --json",
+            "timeout": 30000,
+            "description": "babysitter SessionStart hook (workflow-driven)"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "name": "babysitter-pre-tool-use",
+            "type": "workflow",
+            "command": "adapters-hooks invoke --adapter antigravity --handler \"bash ${ANTIGRAVITY_SKILL_PATH}/hooks/babysitter-proxied-pre-tool-use.sh\" --json",
+            "timeout": 30000,
+            "description": "babysitter PreToolUse hook (workflow-driven)"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "name": "babysitter-post-tool-use",
+            "type": "workflow",
+            "command": "adapters-hooks invoke --adapter antigravity --handler \"bash ${ANTIGRAVITY_SKILL_PATH}/hooks/babysitter-proxied-post-tool-use.sh\" --json",
+            "timeout": 30000,
+            "description": "babysitter PostToolUse hook (workflow-driven)"
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "hooks": [
+          {
+            "name": "babysitter-after-agent",
+            "type": "workflow",
+            "command": "adapters-hooks invoke --adapter antigravity --handler \"bash ${ANTIGRAVITY_SKILL_PATH}/hooks/babysitter-proxied-after-agent.sh\" --json",
+            "timeout": 30000,
+            "description": "babysitter AfterAgent hook (workflow-driven)"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "name": "babysitter-session-end",
+            "type": "workflow",
+            "command": "adapters-hooks invoke --adapter antigravity --handler \"bash ${ANTIGRAVITY_SKILL_PATH}/hooks/babysitter-proxied-session-end.sh\" --json",
+            "timeout": 30000,
+            "description": "babysitter SessionEnd hook (workflow-driven)"
+          }
+        ]
+      }
+    ],
+    "SessionIdle": [
+      {
+        "hooks": [
+          {
+            "name": "babysitter-session-idle",
+            "type": "workflow",
+            "command": "adapters-hooks invoke --adapter antigravity --handler \"bash ${ANTIGRAVITY_SKILL_PATH}/hooks/babysitter-proxied-session-idle.sh\" --json",
+            "timeout": 30000,
+            "description": "babysitter SessionIdle hook (workflow-driven)"
+          }
+        ]
+      }
+    ]
+  }
+}
