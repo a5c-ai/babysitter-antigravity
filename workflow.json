@@ -1,6 +1,6 @@
 {
   "name": "babysitter",
-  "version": "6.0.1-staging.cecb2f9e8fd9",
+  "version": "6.0.1-staging.59a909e8decb",
   "orchestration": "workflow-driven",
   "steps": [
     {
